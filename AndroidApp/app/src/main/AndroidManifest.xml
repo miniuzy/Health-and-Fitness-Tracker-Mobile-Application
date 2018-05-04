@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mohammeduzair.androidapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <uses-permission android:name="com.samsung.permission.SSENSOR_HRM_RAW_PPG" />
+    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_fitness_center_black_24dp"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+         <activity android:name=".Login.login">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+        <!--<activity android:name=".Home.Homepage">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD1H_uFtjZq76I3ZBDaLtdt7u0VhNEuX-k" />
+
+         <activity android:name=".Home.Homepage" />
+        <!--<activity android:name=".Login.login" />-->
+        <activity android:name=".Login.signup" />
+        <activity android:name=".Home.heartrate" />
+        <activity android:name=".Home.stepcounter" />
+        <activity android:name=".Home.locationtracker" />
+        <activity android:name=".Home.caloriecounter" />
+        <activity android:name=".Home.sleeptracker" />
+        <activity android:name=".Home.settimer" />
+        <activity android:name=".ThrdPage.menu" />
+        <activity android:name=".ScndPage.musicplayer" />
+        <activity android:name=".ThrdPage.settings2" />
+        <activity android:name=".ThrdPage.settings3" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider193821794728481"
+            android:exported="true" />
+
+        <activity android:name=".ThrdPage.settings1" />
+        <activity android:name=".ThrdPage.viewdata" />
+
+        <service android:name=".utility.MusicService" />
+
+        <activity android:name=".Home.WeeklyChallenge"></activity>
+    </application>
+
+</manifest>
